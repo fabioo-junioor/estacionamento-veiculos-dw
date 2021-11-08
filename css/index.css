@@ -1,0 +1,87 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: #333;
+
+}
+/*Header -------------------------------------------*/
+.cabecalho{
+    display: flex;
+    justify-content: center;
+    margin: 0.5% 0%;
+    border-bottom: 2px solid white;
+
+}
+.cabecalho .navbar{
+    width: 90vw;
+    padding: 1%;
+
+}
+.navbar-brand img{
+    width: 90px;
+    height: auto;
+    padding-left: 5%;
+
+}
+.navbar-collapse{
+    background-color: #333;
+
+}
+.collapse ul{
+    padding-right: 5%;
+
+}
+.nav-item .nav-link{
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: white !important;
+    padding: 1%;
+
+}
+.navbar-toggler{
+    background-color: white;
+
+}
+
+/*Corpo --------------------------------------------*/
+.corpo{
+    background-color: #333;
+    border-bottom: 2px solid white;
+
+}
+.corpo .container-fluid{
+    display: flex;
+    width: 90vw;
+    height: 70vh;
+    justify-content: center;
+    padding: 1%;
+    
+}
+.corpo .container-fluid h4{
+    color: white;
+    padding-top: 20px;
+
+}
+/*Rodape ---------------------------------------------*/
+.rodape{
+    background-color: rgb(22, 22, 22);
+    padding: 5% 0% 0% 0%;
+
+}
+.rodape .container-fluid{
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+.rodape .container-fluid p{
+    color: white;
+    font-size: 1rem;
+
+}
