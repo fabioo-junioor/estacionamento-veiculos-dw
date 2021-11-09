@@ -37,13 +37,37 @@
     </nav>
   </header>
   <section class="corpo">
-    <div class="container-fluid">      
+    <div class="container-fluid">
       <div class="registro-veiculo">
         <h4>REGISTRO DE VEICULO!!</h4>
+        <form id="formulario" name="formulario">
+          <div>
+            <label for="" class="form-label">Escolha a Placa do Veiculo:</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Escolha uma Opção</option>
+              <option value="1">Placa veiculo 1</option>
+              <option value="2">Placa veiculo 2</option>
+              <option value="3">Placa veiculo 3</option>
+            </select>
+          </div>
+          <div>
+            <label for="" class="form-label">Entrada ou Saida de Veiculo:</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Escolha uma Opção</option>
+              <option value="1">Entrada</option>
+              <option value="2">Saida</option>
+            </select>
+          </div>
+          <div>
+            <button id="enviar" type="submit" class="btn btn-outline-secondary">Enviar</button>
+          </div>
+        </form>
       </div>
+      <!--
       <div class="amostra-carros">
         <h4>LISTA DE CARROS NO ESTACIONAMNETO!!</h4>
-      </div>      
+      </div>
+      -->
     </div>
   </section>
   <footer class="rodape">

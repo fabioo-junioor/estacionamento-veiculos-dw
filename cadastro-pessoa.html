@@ -38,10 +38,18 @@
     <section class="corpo">
         <div class="container-fluid">
             <div class="cad-pessoa">
-                <h4>FORMULARIO DE CADASTRO DE PESSOA!!</h4>
-                <div class="form-pessoa">
-
-                </div>
+                <h4>FORMULÁRIO DE CADASTRO DE PESSOA!!</h4>
+                <form id="formulario" name="formulario">
+                  <label for="" class="form-label">Informe seu nome:</label>
+                  <input type="text" id="nome" placeholder="Nome" class="form-control">
+                  <label for="" class="form-label">Informe seu CPF:</label>
+                  <input type="number" id="cpf" placeholder="CPF" class="form-control">
+                  <label for="" class="form-label">Informe seu telefone:</label>
+                  <input type="tel" id="telefone" placeholder="Telefone" class="form-control">
+                  <label for="" class="form-label">Informe o numero do apartamento:</label>
+                  <input type="text" id="num_apart" placeholder="Numero do Apartamento" class="form-control">
+                  <button id="enviar" type="submit" class="btn btn-outline-secondary">Enviar</button>
+                </form>
             </div>
         </div>
     </section>
