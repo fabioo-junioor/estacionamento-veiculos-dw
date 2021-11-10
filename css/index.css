@@ -69,7 +69,13 @@ body{
 }
 .corpo .container-fluid h4{
     color: #9d4edd;
-    padding-top: 20px;
+    padding: 20px 0px;
+    text-align: center;
+
+}
+.registro-veiculo{
+    width: 80vw;
+    padding: 1%;
 
 }
 .registro-veiculo #formulario{
@@ -77,6 +83,47 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
+    margin-top: 30px;
+
+}
+.registro-veiculo #formulario div{
+    padding: 10px 15px;
+
+}
+.registro-veiculo #formulario label{
+    color: #9d4edd;
+    font-size: 1.1rem;
+}
+.registro-veiculo #formulario select{
+    background-color: rgba(0, 0, 0, 0.250);
+    color: #9d4edd;
+    width: 15rem;
+    height: 3rem;
+    border: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+
+}
+.registro-veiculo #formulario option{
+    border-radius: 10px;
+    font-weight: 500;
+    
+}
+.registro-veiculo #formulario button{
+    background-color: rgba(0, 0, 0, 0.250);
+    color: white;
+    font-size: 1rem;
+    width: 10rem;
+    height: 3rem;
+    border: 1px solid white;
+    border-radius: 10px;
+
+}
+.registro-veiculo #formulario button:hover{
+    background-color: rgba(255, 255, 255, 0.200);
+    
 }
 /*Rodape ---------------------------------------------*/
 .rodape{

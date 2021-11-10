@@ -6,4 +6,5 @@
 - Mudança nas cores de fonts, borders -> #9d4edd  
 - Modelos conceitual e lógico alterados.  
 - Inserção de formulários de cadastro nas paginas cadastro de pessoas, cadastro de veiculos.  
-- Inserção de modal com cadastro de modelo, botão na pagina cadastro de veiculos.
+- Inserção de modal com cadastro de modelo, botão na pagina cadastro de veiculos.  
+- Estilização de formularios das paginas Inicio e cadastro de pessoa.
