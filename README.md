@@ -9,4 +9,6 @@
 - Inserção de modal com cadastro de modelo, botão na pagina cadastro de veiculos.  
 - Estilização de formularios das paginas Inicio e cadastro de pessoa.  
 - Estilização completa de formularios e modais.  
-- Criação de arquivo para validação de formulário.
+- Criação de arquivo para validação de formulário.  
+- Alteração de logotipo.  
+- Mudança de cor do (modal)#fade.
