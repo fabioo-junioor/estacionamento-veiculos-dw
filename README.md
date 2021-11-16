@@ -7,4 +7,6 @@
 - Modelos conceitual e lógico alterados.  
 - Inserção de formulários de cadastro nas paginas cadastro de pessoas, cadastro de veiculos.  
 - Inserção de modal com cadastro de modelo, botão na pagina cadastro de veiculos.  
-- Estilização de formularios das paginas Inicio e cadastro de pessoa.
+- Estilização de formularios das paginas Inicio e cadastro de pessoa.  
+- Estilização completa de formularios e modais.  
+- Criação de arquivo para validação de formulário.

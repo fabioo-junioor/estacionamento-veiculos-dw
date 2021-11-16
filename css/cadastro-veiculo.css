@@ -1,0 +1,188 @@
+/*Corpo --------------------------------------------*/
+/*Formulario de cadastro de modelo (modal) ---------*/
+.corpo .cad-modelo{
+    border-bottom: 2px solid #9d4edd;
+
+}
+.corpo .cad-modelo > button{
+    background-color: rgba(0, 0, 0, 0.400);
+    color: white;
+    font-size: 1rem;
+    width: 40%;
+    height: 3rem;
+    border: 1px solid #9d4edd;
+    border-radius: 10px;
+    margin-bottom: 0.2rem;
+    
+
+}
+.corpo .cad-modelo > button:hover{
+    border: 1px solid white;
+
+}
+.corpo .modal-header, .modal-footer {
+    background-color: #9d4edd;
+    
+}
+.corpo .modal-header #staticBackdropLabel{
+    color: white;
+    
+}
+.corpo .cad-modelo .modal-footer button{
+    background-color: #333;
+    color: white;
+    font-size: 1.1rem;
+    width: 30%;
+    height: 3.5rem;
+    border: 1px solid #9d4edd;
+    border-radius: 10px;
+
+}
+.corpo .cad-modelo .modal-footer button:hover{
+    border: 1px solid white;
+    
+}
+.corpo .cad-modelo .modal-body{
+    background-color: #333;
+
+}
+.corpo .modal-body #formulario label{
+    color: #9d4edd;
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+    margin-top: 1rem;
+    font-weight: 400;
+
+}
+.corpo .modal-body #formulario input{
+    background-color: rgba(0, 0, 0, 0.400);
+    color: white;
+    width: 100%;
+    height: 3rem;
+    border: 1px solid #9d4edd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+    padding: 2px 10px;
+
+}
+.corpo .modal-body #formulario select{
+    background-color: rgba(0, 0, 0, 0.400);
+    color: white;
+    width: 100%;
+    height: 3rem;
+    border: 1px solid #9d4edd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+
+}
+
+.corpo .modal-body #formulario input:hover{
+    border-bottom: 1px solid white;
+
+}
+.corpo .modal-body #formulario input::placeholder{
+    color: white;
+    font-weight: 400;
+
+}
+.corpo .modal-body #formulario select:hover{
+    border-bottom: 1px solid white;
+
+}
+.corpo .modal-body #formulario option{
+    border-radius: 10px;
+    font-weight: 500;
+    
+}
+.corpo .modal-body #formulario button{
+    background-color: rgba(0, 0, 0, 0.400);
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    height: 3rem;
+    border: 1px solid #9d4edd;
+    border-radius: 10px;
+    margin-top: 1rem;
+
+}
+.corpo .modal-body #formulario button:hover{
+    border: 1px solid white;
+
+}
+
+
+/*Formulario de cadastro de veiculo-----------------*/
+.corpo .cad-veiculo #formulario{
+    margin-top: 20px;
+
+}
+.corpo .cad-veiculo #formulario label{
+    color: #9d4edd;
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+    margin-top: 1rem;
+    font-weight: 400;
+
+}
+.corpo .cad-veiculo #formulario input{
+    background-color: rgba(0, 0, 0, 0.400);
+    color: white;
+    width: 100%;
+    height: 3rem;
+    border: 1px solid #9d4edd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+    padding: 2px 10px;
+
+}
+.corpo .cad-veiculo #formulario select{
+    background-color: rgba(0, 0, 0, 0.400);
+    color: white;
+    width: 100%;
+    height: 3rem;
+    border: 1px solid #9d4edd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+
+}
+.corpo .cad-veiculo #formulario input:hover{
+    border-bottom: 1px solid white;
+
+}
+.corpo .cad-veiculo #formulario input::placeholder{
+    color: white;
+    font-weight: 400;
+
+}
+.corpo .cad-veiculo #formulario select:hover{
+    border-bottom: 1px solid white;
+
+}
+.corpo .cad-veiculo #formulario option{
+    border-radius: 10px;
+    font-weight: 500;
+    
+}
+.corpo .cad-veiculo #formulario button{
+    background-color: rgba(0, 0, 0, 0.400);
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    height: 3rem;
+    border: 1px solid #9d4edd;
+    border-radius: 10px;
+    margin-top: 1rem;
+
+}
+.corpo .cad-veiculo #formulario button:hover{
+    border: 1px solid white;
+
+}
