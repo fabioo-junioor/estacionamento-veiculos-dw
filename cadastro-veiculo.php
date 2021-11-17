@@ -16,7 +16,7 @@
   <header class="cabecalho">
     <nav class="navbar navbar-expand-md navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/index.html"><img src="/img/UFSM_secundario.png" alt=""></a>
+        <a class="navbar-brand" href="index.php"><img src="img/UFSM_secundario.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -67,7 +67,7 @@
                       <label for="" class="form-label">Informe a Cor:</label>
                       <input type="text" id="cor" placeholder="Cor" class="form-control">
                       <label for="" class="form-label">Informe o Tipo "Sedan/Hatch":</label>
-                      <select class="form-select" aria-label="Default select example">
+                      <select class="form-select" id="modelo-veiculo-modal" aria-label="Default select example">
                         <option selected>Escolha uma Opção</option>
                         <option value="1">Sedan</option>
                         <option value="2">Hatch</option>
@@ -89,11 +89,18 @@
             <label for="" class="form-label">Informe a placa do veiculo:</label>
             <input type="text" id="placa" placeholder="Placa" class="form-control">
             <label for="" class="form-label">Modelo do veiculo:</label>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" id="modelo-veiculo" aria-label="Default select example">
               <option selected>Escolha uma Opção</option>
               <option value="1">Fiat/Uno/Vermelho/Sedan</option>
               <option value="2">Fiat/Palio/Branco/Hatch</option>
               <option value="3">Ford/Focus/Preto/Hatch</option>
+            </select>
+            <label for="" class="form-label">Nome do Proprietário do Veiculo:</label>
+            <select class="form-select" id="proprietario-veiculo" aria-label="Default select example">
+              <option selected>Escolha uma Opção</option>
+              <option value="1">Joao Carlos</option>
+              <option value="2">Pedro Silva</option>
+              <option value="3">Maria Santos</option>
             </select>
             <button id="enviar" type="submit" class="btn btn-outline-secondary">Enviar</button>
           </form>
@@ -110,5 +117,4 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 </body>
-
 </html>

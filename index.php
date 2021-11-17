@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="css/index.css">
   <title>Estacionamento de Veiculos</title>
 </head>
@@ -15,9 +14,8 @@
   <header class="cabecalho">
     <nav class="navbar navbar-expand-md navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/index.html"><img src="/img/UFSM_secundario.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index.php"><img src="img/UFSM_secundario.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -43,7 +41,7 @@
         <form id="formulario" name="formulario">
           <div>
             <label for="" class="form-label">Escolha a Placa do Veiculo:</label>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" id="placa-veiculo" aria-label="Default select example">
               <option selected>Escolha uma Opção</option>
               <option value="1">Placa veiculo 1</option>
               <option value="2">Placa veiculo 2</option>
@@ -52,7 +50,7 @@
           </div>
           <div>
             <label for="" class="form-label">Entrada ou Saida de Veiculo:</label>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" id="entrada-saida" aria-label="Default select example">
               <option selected>Escolha uma Opção</option>
               <option value="1">Entrada</option>
               <option value="2">Saida</option>
@@ -63,11 +61,6 @@
           </div>
         </form>
       </div>
-      <!--
-      <div class="amostra-carros">
-        <h4>LISTA DE CARROS NO ESTACIONAMNETO!!</h4>
-      </div>
-      -->
     </div>
   </section>
   <footer class="rodape">
@@ -75,9 +68,6 @@
       <p> Desenvolvido por:</p>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-
 </html>
