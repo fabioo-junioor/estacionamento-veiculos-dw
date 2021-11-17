@@ -11,4 +11,5 @@
 - Estilização completa de formularios e modais.  
 - Criação de arquivo para validação de formulário.  
 - Alteração de logotipo.  
-- Mudança de cor do (modal)#fade.
+- Mudança de cor do (modal)#fade.  
+- Alterada a extensão dos arquivos para (.php).
