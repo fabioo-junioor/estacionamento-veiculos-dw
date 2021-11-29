@@ -6,10 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/home.css">
   <title>Estacionamento de Veiculos</title>
 </head>
-
 <body>
   <header class="cabecalho">
     <nav class="navbar navbar-expand-md navbar-light">
@@ -37,7 +36,7 @@
   <section class="corpo">
     <div class="container-fluid">
       <div class="registro-veiculo">
-        <h4>REGISTRAR ENTRADA OU SAIDA DE VEICULO!</h4>
+        <h4>REGISTRAR ENTRADA E SAIDA DE VEICULO!</h4>
         <form id="formulario" name="formulario">
           <div>
             <label for="" class="form-label">Escolha a Placa do Veiculo:</label>
@@ -60,6 +59,9 @@
             <button id="enviar" type="submit" class="btn btn-outline-secondary">Enviar</button>
           </div>
         </form>
+      </div>
+      <div class="ultimos-registros">
+        <h4>ULTIMOS VEICULOS REGISTRADOS</h4>
       </div>
     </div>
   </section>

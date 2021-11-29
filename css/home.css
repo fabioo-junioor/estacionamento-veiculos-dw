@@ -61,9 +61,10 @@ body{
 }
 .corpo .container-fluid{
     display: flex;
+    flex-direction: column;
     width: 90vw;
     height: 70vh;
-    justify-content: center;
+    align-items: center;
     padding: 1%;
     
 }
@@ -77,6 +78,10 @@ body{
     width: 80vw;
     padding: 1%;
 
+}
+.ultimos-registros{
+    margin-top: 1%;
+    
 }
 .registro-veiculo #formulario{
     display: flex;
