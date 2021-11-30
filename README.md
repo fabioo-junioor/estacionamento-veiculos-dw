@@ -12,4 +12,7 @@
 - Criação de arquivo para validação de formulário.  
 - Alteração de logotipo.  
 - Mudança de cor do (modal)#fade.  
-- Alterada a extensão dos arquivos para (.php).
+- Alterada a extensão dos arquivos para (.php).  
+- Listar todos os veiculos já cadastrados (modal).  
+- Listar todos as pessoas já cadastrados (modal).  
+- Criado validações de formulário com (.js).
