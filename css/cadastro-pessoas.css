@@ -1,22 +1,23 @@
 /*Corpo --------------------------------------------*/
-.corpo .cad-pessoa{
+.corpo .container-fluid{
     display: flex;
-    width: 90vw;
-    flex-direction: column;
-    
-}
-.corpo .cad-pessoa .listar-pessoas{
-    text-align: end;
+    width: 60%;
 
 }
-.corpo .cad-pessoa div{
-    align-self: center;
-    width: 60%;
-    align-self: center;
+.corpo .cad-pessoa{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.corpo .listar-pessoas{
+    align-self: flex-end;
+    margin: 5% 0% 0% 0%;
 
 }
 .corpo .cad-pessoa #formulario{
-    margin-top: 20px;
+    margin-top: 1%;
+    width: 100%;
 
 }
 .corpo .cad-pessoa #formulario label{

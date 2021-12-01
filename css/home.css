@@ -57,26 +57,21 @@ body{
 .corpo{
     background-color: #333;
     border-bottom: 2px solid #9d4edd;
+    width: 100%;
 
 }
 .corpo .container-fluid{
     display: flex;
     flex-direction: column;
-    width: 90vw;
-    height: 70vh;
+    width: 80vw;
     align-items: center;
-    padding: 1%;
+    padding: 2% 0% 5% 0%;
     
 }
 .corpo .container-fluid h4{
     color: #9d4edd;
     padding: 20px 0px;
     text-align: center;
-
-}
-.registro-veiculo{
-    width: 80vw;
-    padding: 1%;
 
 }
 .ultimos-registros{
@@ -88,7 +83,8 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 30px;
+    margin-top: 3%;
+    margin-bottom: 3%;
 
 }
 .registro-veiculo #formulario div{
@@ -98,6 +94,7 @@ body{
 .registro-veiculo #formulario label{
     color: #9d4edd;
     font-size: 1.1rem;
+    
 }
 .registro-veiculo #formulario select{
     background-color: rgba(0, 0, 0, 0.400);
@@ -138,6 +135,7 @@ body{
 .rodape{
     background-color: rgb(22, 22, 22);
     padding: 5% 0% 0% 0%;
+    height: 15vh;
 
 }
 .rodape .container-fluid{
