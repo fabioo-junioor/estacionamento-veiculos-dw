@@ -16,4 +16,5 @@
 - Listar todos os veiculos já cadastrados (modal).  
 - Listar todos as pessoas já cadastrados (modal).  
 - Criado validações de formulário com (.js).  
-- Correções.    
+- Correções.  
+- Responsividade implementada. 

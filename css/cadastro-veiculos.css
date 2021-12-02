@@ -227,3 +227,85 @@
     border: 2px solid white;
 
 }
+
+/*Response pagina CADASTRO VEICULOS -----------*/
+@media screen and (max-width: 768px){
+    .cad-veiculo{
+        width: 90%;
+
+    }
+    .cad-veiculo #formulario2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+    }
+    .corpo .cad-veiculo #formulario2 div{
+        width: 100%;
+    
+    }
+    .corpo .cad-veiculo #formulario2 div select{
+        width: 100%;
+    
+    }
+    .corpo .cad-veiculo #formulario2 div input{
+        width: 100%;
+    
+    }
+    .corpo .cad-veiculo #formulario2 div button{
+        width: 100%;
+    
+    }
+}
+@media screen and (max-width: 500px){
+    .corpo .container-fluid{
+        width: 95%;
+
+    }
+    .cad-veiculo{
+        width: 100%;
+
+    }
+    .cad-veiculo #formulario2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+    }
+    .corpo .cad-veiculo #formulario2 div{
+        width: 100%;
+    
+    }
+    .corpo .cad-veiculo #formulario2 div input{
+        width: 100%;
+
+    }
+    .corpo .cad-veiculo #formulario2 div select{
+        width: 100%;
+    
+    }
+    .cad-pessoa #formulario div button{
+        width: 100%;
+    
+    }
+    .corpo .container-fluid .cad-veiculo #formulario2 div label{
+        width: 100%;
+        font-size: 1.1rem;
+
+    }
+    .corpo .container-fluid h4{
+        font-size: 1.2rem;
+        padding: 1%;
+
+    }
+    .corpo .button-modais .listar-veiculos button{
+        font-size: 1rem;
+
+    }
+    .corpo .button-modais .cad-modelo button{
+        font-size: 1rem;
+
+    }
+}

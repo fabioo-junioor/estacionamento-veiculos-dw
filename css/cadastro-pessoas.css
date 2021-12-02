@@ -134,3 +134,69 @@
     background-color: #333;
 
 }
+
+/*Response pagina CADASTRO PESSOAS -----------*/
+@media screen and (max-width: 768px){
+    .cad-pessoa{
+        width: 90%;
+
+    }
+    .cad-pessoa #formulario{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+    }
+    .cad-pessoa #formulario div{
+        width: 100%;
+    
+    }
+    .cad-pessoa #formulario div select{
+        width: 100%;
+    
+    }
+    .cad-pessoa #formulario div button{
+        width: 100%;
+    
+    }
+}
+@media screen and (max-width: 500px){
+    .corpo .container-fluid{
+        width: 95%;
+
+    }
+    .cad-pessoa{
+        width: 100%;
+
+    }
+    .cad-pessoa #formulario{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+    }
+    .cad-pessoa #formulario div{
+        width: 100%;
+    
+    }
+    .cad-pessoa #formulario div input{
+        width: 100%;
+    
+    }
+    .cad-pessoa #formulario div button{
+        width: 100%;
+    
+    }
+    .corpo .container-fluid .cad-pessoa #formulario div label{
+        width: 100%;
+        font-size: 1.1rem;
+
+    }
+    .corpo .container-fluid h4{
+        font-size: 1.2rem;
+        padding: 1%;
+
+    }
+}
