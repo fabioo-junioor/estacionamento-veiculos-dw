@@ -81,6 +81,20 @@
     border: 1px solid white;
     
 }
+.corpo .listar-veiculos .modal-footer button{
+    background-color: #333;
+    color: white;
+    font-size: 1.1rem;
+    width: 30%;
+    height: 3.5rem;
+    border: 1px solid #9d4edd;
+    border-radius: 10px;
+
+}
+.corpo .listar-veiculos .modal-footer button:hover{
+    border: 1px solid white;
+    
+}
 .corpo .cad-modelo .modal-body{
     background-color: #333;
 
@@ -137,7 +151,7 @@
     font-weight: 500;
     
 }
-.corpo .modal-body #formulario button{
+.corpo .cad-modelo .modal-body #formulario button{
     background-color: rgba(0, 0, 0, 0.400);
     color: white;
     font-size: 1rem;
@@ -148,7 +162,7 @@
     margin-top: 1rem;
 
 }
-.corpo .modal-body #formulario button:hover{
+.corpo .cad-modelo .modal-body #formulario button:hover{
     border: 1px solid white;
 
 }

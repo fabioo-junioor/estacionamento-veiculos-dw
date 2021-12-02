@@ -116,6 +116,21 @@
     color: white;
     
 }
+.corpo .listar-pessoas .modal-footer button{
+    background-color: #333;
+    color: white;
+    font-size: 1.1rem;
+    width: 30%;
+    height: 3.5rem;
+    border: 1px solid #9d4edd;
+    border-radius: 10px;
+
+}
+.corpo .listar-pessoas .modal-footer button:hover{
+    border: 1px solid white;
+    
+}
+/*
 .corpo .cad-modelo .modal-footer button{
     background-color: #333;
     color: white;
@@ -134,6 +149,7 @@
     background-color: #333;
 
 }
+*/
 
 /*Response pagina CADASTRO PESSOAS -----------*/
 @media screen and (max-width: 768px){
