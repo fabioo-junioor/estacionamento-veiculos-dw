@@ -1,3 +1,7 @@
+<?php
+include('php/conexao.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,7 +20,7 @@
   <header class="cabecalho">
     <nav class="navbar navbar-expand-md navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="img/UFSM_secundario.png" alt=""></a>
+        <a class="navbar-brand" href="index.php"><img src="img/UFSM_secundario.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -24,13 +28,13 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cadastro-pessoa.html">Cadastrar Pessoas</a>
+              <a class="nav-link" href="cadastro-pessoa.php">Cadastrar Pessoas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cadastro-veiculo.html">Cadastrar Veiculos</a>
+              <a class="nav-link" href="cadastro-veiculo.php">Cadastrar Veiculos</a>
             </li>
           </ul>
         </div>
@@ -58,7 +62,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <h4>PESQUISAR LISTA VIA BACK END</h4>
+
+                <?php
+                $result = mysqli_query($conexao,"SELECT nome FROM `pessoa`;");
+                while ($row = $result->fetch_assoc()) {
+                    ?><h4><?php echo $row['nome'];?></h4><?php
+                }
+                ?>
+
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -68,23 +79,23 @@
         </div>
       </div>
 
-      <div class="cad-pessoa">
-        <form id="formulario" name="formulario">
+      <div class="cad-pessoa"> 
+        <form id="formulario" name="formulario" action="php/save_pessoa.php" method="POST">
           <div>
             <label for="" class="form-label">Informe seu nome:</label>
-            <input type="text" id="nome" placeholder="Nome" class="form-control">
+            <input type="text" id="nome" placeholder="Nome" name="nome" class="form-control">
           </div>
           <div>
             <label for="" class="form-label">Informe seu CPF:</label>
-            <input type="number" id="cpf" placeholder="CPF" class="form-control">
+            <input type="number" id="cpf" placeholder="CPF" name="cpf" class="form-control">
           </div>
           <div>
             <label for="" class="form-label">Informe seu telefone:</label>
-            <input type="tel" id="telefone" placeholder="Telefone" class="form-control">
+            <input type="tel" id="telefone" placeholder="Telefone" name="telefone" class="form-control">
           </div>
           <div>
             <label for="" class="form-label">Informe o numero do apartamento:</label>
-            <input type="text" id="num_apart" placeholder="Numero do Apartamento" class="form-control">
+            <input type="text" id="num_apart" placeholder="Numero do Apartamento" name="apart" class="form-control">
           </div>
           <div>
             <button id="enviar" type="submit" class="btn btn-outline-secondary">Enviar</button>

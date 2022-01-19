@@ -1,3 +1,7 @@
+<?php
+include('php/conexao.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,14 +13,14 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/response.css">
-  <title>Estacionamento de Veiculos</title>
+  <title>Estacionamento de Veiculos </title>
 </head>
 
 <body>
   <header class="cabecalho">
     <nav class="navbar navbar-expand-md navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="img/UFSM_secundario.png" alt=""></a>
+        <a class="navbar-brand" href="index.php"><img src="img/UFSM_secundario.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -24,13 +28,13 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cadastro-pessoa.html">Cadastrar Pessoas</a>
+              <a class="nav-link" href="cadastro-pessoa.php">Cadastrar Pessoas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cadastro-veiculo.html">Cadastrar Veiculos</a>
+              <a class="nav-link" href="cadastro-veiculo.php">Cadastrar Veiculos</a>
             </li>
           </ul>
         </div>
@@ -45,19 +49,24 @@
       </div>
 
       <div class="registro-veiculo">
-        <form id="formulario" name="formulario">
+        <form id="formulario" name="formulario" action="php/save_in_out.php" method="POST">
           <div>
             <label for="" class="form-label">Escolha a Placa do Veiculo:</label>
-            <select class="form-select" id="placa_veiculo" aria-label="Default select example">
+            <select class="form-select" id="placa_veiculo" name="codigo_veiculo" aria-label="Default select example">
               <option selected value="0">Escolha uma Opção</option>
-              <option value="1">Placa veiculo 1</option>
-              <option value="2">Placa veiculo 2</option>
-              <option value="3">Placa veiculo 3</option>
+
+              <?php
+                $result = mysqli_query($conexao,"SELECT codigo_veiculo,placa FROM `ve??culo`;");
+                while ($row = $result->fetch_assoc()) {
+                  ?> <option value="<?php echo $row['codigo_veiculo']; ?>"><?php  echo $row['placa']; ?></option> <?php
+                }
+              ?>
+              
             </select>
           </div>
           <div>
             <label for="" class="form-label">Entrada ou Saida de Veiculo:</label>
-            <select class="form-select" id="entrada_saida" aria-label="Default select example">
+            <select class="form-select" id="entrada_saida" name="entrada_saida" aria-label="Default select example">
               <option selected value="0">Escolha uma Opção</option>
               <option value="1">Entrada</option>
               <option value="2">Saida</option>
@@ -70,9 +79,18 @@
       </div>
 
       <div class="ultimos-registros">
-        <h4>ULTIMOS VEICULOS REGISTRADOS (back end)</h4>
+      <h4>ULTIMOS VEICULOS REGISTRADOS</h4>
+      <h4>  ENTRADA || SAÍDA || Carro ID </h4>
+        <?php
+          $result = mysqli_query($conexao,"SELECT * FROM `registro`;");
+          while ($row = $result->fetch_assoc()) {
+            ?><h4><?php echo $row['data_chegada'];?> || <?php echo $row['data_saida'] ;?> || <?php echo $row['cod_veiculo'] ;?></h4><?php
+          }
+        ?>
+
+        
       </div>
-      
+
     </div>
   </section>
   <footer class="rodape">

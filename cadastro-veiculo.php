@@ -1,3 +1,7 @@
+<?php
+include('php/conexao.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,7 +20,7 @@
   <header class="cabecalho">
     <nav class="navbar navbar-expand-md navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="img/UFSM_secundario.png" alt=""></a>
+        <a class="navbar-brand" href="index.php"><img src="img/UFSM_secundario.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -24,13 +28,13 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cadastro-pessoa.html">Cadastrar Pessoas</a>
+              <a class="nav-link" href="cadastro-pessoa.php">Cadastrar Pessoas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cadastro-veiculo.html">Cadastrar Veiculos</a>
+              <a class="nav-link" href="cadastro-veiculo.php">Cadastrar Veiculos</a>
             </li>
           </ul>
         </div>
@@ -60,7 +64,14 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <h4>PESQUISAR LISTA VIA BACK END</h4>
+
+                <?php
+                $result = mysqli_query($conexao,"SELECT placa FROM `ve??culo`;");
+                while ($row = $result->fetch_assoc()) {
+                    ?><h4><?php echo $row['placa'];?></h4><?php
+                }
+                ?>
+
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -83,19 +94,19 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form id="formulario" name="formulario">
+                  <form id="formulario" name="formulario" action="php/save_modelo.php" method="POST">
                     <label for="" class="form-label">Informe a Marca:</label>
-                    <input type="text" id="marca" placeholder="Marca" class="form-control">
+                    <input type="text" id="marca" placeholder="Marca" name="marca" class="form-control">
                     <label for="" class="form-label">Informe o Modelo:</label>
-                    <input type="text" id="modelo" placeholder="Modelo" class="form-control">
+                    <input type="text" id="modelo" placeholder="Modelo" name="modelo" class="form-control">
                     <label for="" class="form-label">Informe a Cor:</label>
-                    <input type="text" id="cor" placeholder="Cor" class="form-control">
+                    <input type="text" id="cor" placeholder="Cor" name="cor" class="form-control">
                     <label for="" class="form-label">Informe o Tipo "Sedan/Hatch":</label>
-                    <select class="form-select" id="modelo_veiculo_modal" aria-label="Default select example">
+                    <select class="form-select" id="modelo_veiculo_modal" name="tipo" aria-label="Default select example">
                       <option selected value="0">Escolha uma Opção</option>
-                      <option value="1">Sedan</option>
-                      <option value="2">Hatch</option>
-                      <option value="3">Motocicleta*</option>
+                      <option value="Sedan">Sedan</option>
+                      <option value="Hatch">Hatch</option>
+                      <option value="Motocicleta">Motocicleta</option>
                     </select>
                     <button id="enviar_modelo" type="submit" class="btn btn-outline-secondary">Enviar</button>
                   </form>
@@ -110,27 +121,37 @@
       </div>
 
       <div class="cad-veiculo">
-        <form id="formulario2" name="formulario2">
+        <form id="formulario2" name="formulario2" action="php/save_veiculo.php" method="POST">
           <div>
             <label for="" class="form-label">Informe a placa do veiculo:</label>
-            <input type="text" id="placa" placeholder="Placa" class="form-control">
+            <input type="text" id="placa" placeholder="Placa" name="placa" class="form-control">
           </div>
           <div>
             <label for="" class="form-label">Modelo do veiculo:</label>
-            <select class="form-select" id="modelo_veiculo" aria-label="Default select example">
+            <select class="form-select" id="modelo_veiculo" name="modelo" aria-label="Default select example">
               <option selected value="0">Escolha uma Opção</option>
-              <option value="1">Fiat/Uno/Vermelho/Sedan</option>
-              <option value="2">Fiat/Palio/Branco/Hatch</option>
-              <option value="3">Ford/Focus/Preto/Hatch</option>
+              "qwe{$a}rty"
+              <?php
+              $result = mysqli_query($conexao,"SELECT * FROM `modelo`;");
+              while ($row = $result->fetch_assoc()) {
+                ?><option value="<?php echo $row['codigo_modelo'];?>"><?php echo "{$row['marca']}//{$row['modelo']}//{$row['tipo']}//{$row['cor']}";?></option><?php
+              }
+              ?>
+
             </select>
           </div>
           <div>
             <label for="" class="form-label">Nome do Proprietário do Veiculo:</label>
-            <select class="form-select" id="proprietario_veiculo" aria-label="Default select example">
+            <select class="form-select" id="proprietario_veiculo" name="pessoa" aria-label="Default select example">
               <option selected value="0">Escolha uma Opção</option>
-              <option value="1">Joao Carlos</option>
-              <option value="2">Pedro Silva</option>
-              <option value="3">Maria Santos</option>
+
+              <?php
+              $result = mysqli_query($conexao,"SELECT codigo_pessoa,nome FROM `pessoa`;");
+              while ($row = $result->fetch_assoc()) {
+                ?><option value="<?php echo $row['codigo_pessoa'];?>"><?php echo $row['nome'];?></option><?php
+              }
+              ?>
+
             </select>
           </div>
           <div>
