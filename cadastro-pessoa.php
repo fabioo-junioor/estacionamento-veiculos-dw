@@ -95,7 +95,7 @@ include('php/conexao.php');
           </div>
           <div>
             <label for="" class="form-label">Informe o numero do apartamento:</label>
-            <input type="text" id="num_apart" placeholder="Numero do Apartamento" name="apart" class="form-control">
+            <input type="number" id="num_apart" placeholder="Numero do Apartamento" name="apart" class="form-control">
           </div>
           <div>
             <button id="enviar" type="submit" class="btn btn-outline-secondary">Enviar</button>
