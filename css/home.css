@@ -144,7 +144,7 @@ body{
     display: flex;
     width: 90vw;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 
 }
 .rodape .container-fluid p{

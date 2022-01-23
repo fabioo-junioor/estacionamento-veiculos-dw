@@ -17,4 +17,5 @@
 - Listar todos as pessoas já cadastrados (modal).  
 - Criado validações de formulário com (.js).  
 - Correções.  
-- Responsividade implementada. 
+- Responsividade implementada.  
+- Inclusão de contador de visitas.

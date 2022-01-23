@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `modelo` (
   `tipo` varchar(100) NOT NULL,
   `marca` varchar(100) NOT NULL,
   PRIMARY KEY (`codigo_modelo`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `modelo`
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `pessoa` (
   `telefone` varchar(11) NOT NULL,
   `num_apart` int NOT NULL,
   PRIMARY KEY (`codigo_pessoa`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `pessoa`
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `registro` (
   `cod_veiculo` int NOT NULL,
   PRIMARY KEY (`codigo_registro`),
   KEY `cod_veiculo_fk` (`cod_veiculo`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `registro`
@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `ve??culo` (
   PRIMARY KEY (`codigo_veiculo`),
   KEY `cod_pessoa_fk` (`cod_pessoa`),
   KEY `cod_modelo_fk` (`cod_modelo`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `ve??culo`

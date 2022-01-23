@@ -1,7 +1,6 @@
 <?php
 include('php/conexao.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -90,12 +89,12 @@ include('php/conexao.php');
 
         
       </div>
-
     </div>
   </section>
   <footer class="rodape">
-    <div class="container-fluid">
+    <div class="container-fluid" style="flex-direction: column; align-items: center;">
       <p> Copyright © 2021 </p>
+      <p> Total de visitas: <?php include "contador.php"; ?> </p>
     </div>
   </footer>
   <script src="js/validacao-home.js"></script>
