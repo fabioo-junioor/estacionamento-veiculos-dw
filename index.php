@@ -9,12 +9,11 @@ include('php/conexao.php');
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/response.css">
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/tabela-registro.css" />
   <title>Estacionamento de Veiculos </title>
 </head>
-
 <body>
   <header class="cabecalho">
     <nav class="navbar navbar-expand-md navbar-light">
@@ -42,11 +41,9 @@ include('php/conexao.php');
   </header>
   <section class="corpo">
     <div class="container-fluid">
-
       <div>
         <h4>REGISTRAR ENTRADA E SAIDA DE VEICULO!</h4>
       </div>
-
       <div class="registro-veiculo">
         <form id="formulario" name="formulario" action="php/save_in_out.php" method="POST">
           <div>
@@ -76,23 +73,43 @@ include('php/conexao.php');
           </div>
         </form>
       </div>
-
       <div class="ultimos-registros">
-      <h4>ULTIMOS VEICULOS REGISTRADOS</h4>
-      <h4>  ENTRADA || SAÍDA || Carro ID </h4>
-        <?php
-          $result = mysqli_query($conexao,"SELECT * FROM `registro`;");
-          while ($row = $result->fetch_assoc()) {
-            ?><h4><?php echo $row['data_chegada'];?> || <?php echo $row['data_saida'] ;?> || <?php echo $row['cod_veiculo'] ;?></h4><?php
-          }
-        ?>
-
-        
+        <h4>ULTIMOS VEICULOS REGISTRADOS</h4>
+        <button id="reg1" type="submit" class="btn btn-outline-secondary">Registro</button>
+          <div class="tabela_registros">
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">#Entrada</th>
+                    <th scope="col">#Saida</th>
+                    <th scope="col">#Id Carro</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <?php
+                      $result = mysqli_query($conexao,"SELECT * FROM `registro`;");
+                      while ($row = $result->fetch_assoc()) {
+                    ?>
+                    <td>
+                      <?php echo $row['data_chegada'];?>
+                    </td>
+                    <td>
+                      <?php echo $row['data_saida'] ;?>
+                    </td>
+                    <td>
+                     <?php echo $row['cod_veiculo'] ;?>
+                    </td>
+                  </tr>
+                  <?php } ?>
+                </tbody>
+            </table>
+          </div>        
       </div>
     </div>
   </section>
   <footer class="rodape">
-    <div class="container-fluid" style="flex-direction: column; align-items: center;">
+    <div class="container-fluid">
       <p> Copyright © 2021 </p>
       <p> Total de visitas: <?php include "contador.php"; ?> </p>
     </div>
@@ -102,5 +119,4 @@ include('php/conexao.php');
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 </body>
-
 </html>

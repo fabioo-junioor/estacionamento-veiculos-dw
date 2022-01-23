@@ -18,4 +18,7 @@
 - Criado validações de formulário com (.js).  
 - Correções.  
 - Responsividade implementada.  
-- Inclusão de contador de visitas.
+#### Realise 1.0.1  
+- Inclusão de contador de visitas.  
+- Foi adiconado tabelas em: "registro de veiculos, pessoas cadastradas, veiculos cadastrados" para separar as consultas(select).  
+- Foi adicionado botões para emissão de relatório em: "registro de veiculos, pessoas cadastradas, veiculos cadastrados".

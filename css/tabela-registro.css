@@ -1,0 +1,99 @@
+/*Config tabela pagina home ----------------------*/
+.ultimos-registros .tabela_registros table{
+    border: 2px solid #9d4edd;
+    color: white;
+
+}
+.ultimos-registros .tabela_registros thead{
+    font-size: 1.3rem;
+    color: white;
+
+}
+.ultimos-registros .tabela_registros table tr{
+    border: 2px solid #9d4edd;
+    font-size: 1.1rem;
+
+}
+.ultimos-registros #reg1{
+    float: right;
+
+}
+.ultimos-registros button{
+    background-color: rgba(0, 0, 0, 0.400);
+    color: white;
+    font-size: 0.9rem;
+    height: 3rem;
+    border: 2px solid #9d4edd;
+    margin-bottom: 0.3rem;
+    padding: 1px 15px 2px 15px;
+    
+}
+.ultimos-registros button:hover{
+    background-color: rgba(0, 0, 0, 0.400);
+    border: 2px solid white;
+    
+}
+
+/*Config tabela pagina cadastro pessoas (modal) ---*/
+.modal-body .tabela_registros table{
+    border: 2px solid #9d4edd;
+    color: white;
+
+}
+.modal-body .tabela_registros thead{
+    font-size: 1.3rem;
+    color: white;
+
+}
+.modal-body .tabela_registros table tr{
+    border: 2px solid #9d4edd;
+    font-size: 1.1rem;
+
+}
+
+/*Response tabelas das paginas --------------------*/
+@media screen and (max-width: 768px){
+    .ultimos-registros .tabela_registros thead{
+        font-size: 1.2rem;
+    
+    }
+    .ultimos-registros .tabela_registros table tr{
+        font-size: 1rem;
+    
+    }
+}
+@media screen and (max-width: 500px){
+    .ultimos-registros .tabela_registros thead{
+        font-size: 1.1rem;
+    
+    }
+    .ultimos-registros .tabela_registros table tr{
+        font-size: 0.9rem;
+    
+    }
+    .ultimos-registros button{
+        width: 100%;
+
+    }
+}
+/*-----------------------------------------------------*/
+@media screen and (max-width: 768px){
+    .modal-body .tabela_registros thead{
+        font-size: 1.2rem;
+    
+    }
+    .modal-body .tabela_registros table tr{
+        font-size: 1rem;
+    
+    }
+}
+@media screen and (max-width: 500px){
+    .modal-body .tabela_registros thead{
+        font-size: 1.1rem;
+    
+    }
+    .modal-body .tabela_registros table tr{
+        font-size: 0.9rem;
+    
+    }
+}

@@ -12,7 +12,8 @@ include('php/conexao.php');
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/cadastro-veiculos.css">
+  <link rel="stylesheet" href="css/cadastro-veiculos.css" />
+  <link rel="stylesheet" href="css/tabela-registro.css" />
   <title>Estacionamento de Veiculos</title>
 </head>
 
@@ -43,83 +44,118 @@ include('php/conexao.php');
   </header>
   <section class="corpo">
     <div class="container-fluid">
-
       <div>
-        <h4>FORMULÁRIO DE CADASTRO DE VEICULOS!!</h4>
+        <h4>FORMULÁRIO DE CADASTRO DE VEICULOS!</h4>
       </div>
 
-      <div class="button-modais">
-        <div class="listar-veiculos">
-          <!-- INSERIR modal para listar os veiculos ja cadastradas-->
-          <!-- Button trigger modal LISTAR VEICULOS-->
-          <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop1">Veiculos Cadastrados</button>
-          <!-- Modal -->
-          <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel1">Lista de Veiculos Cadastrados</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
+      <div class="button-modais">        
+        <div class="space_button">
+        <!-- Button IMPRIMIR REGISTRO DE CADASTRO-->
+          <div class="registro_veiculos">
+            <button id="reg3" type="button" class="btn btn-secondary">Registro</button>
+          </div>
+        </div>
 
-                <?php
-                $result = mysqli_query($conexao,"SELECT placa FROM `ve??culo`;");
-                while ($row = $result->fetch_assoc()) {
-                    ?><h4><?php echo $row['placa'];?></h4><?php
-                }
-                ?>
-
+        <div class="space_button">
+          <div class="listar-veiculos">
+            <!-- INSERIR modal para listar os veiculos ja cadastradas-->
+            <!-- Button trigger modal LISTAR VEICULOS-->
+            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop1">Veiculos Cadastrados</button>
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel1">Lista de Veiculos Cadastrados</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="tabela_registros">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col">#Placa</th>
+                            <th scope="col">#Codigo Pessoa</th>
+                            <!--
+                              <th scope="col">Codigo Modelo</th>
+                            -->
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <?php
+                              $result = mysqli_query($conexao,"SELECT * FROM `ve??culo`;");
+                              while ($row = $result->fetch_assoc()) {
+                            ?>
+                            <td>
+                              <?php echo $row['placa'];?>
+                            </td>
+                            <td>
+                              <?php echo $row['cod_pessoa'] ;?>
+                            </td>
+                            <!--
+                            <td>
+                              <?php echo $row['cod_modelo'] ;?>
+                            </td>
+                            -->
+                          </tr>
+                            <?php } ?>
+                          </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  </div>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="cad-modelo">
+            <!-- Button trigger modal CADASTRAR MODELO-->
+            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop2">Cadastrar Modelo</button>
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel2">Formulário de Cadastro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="formulario" name="formulario" action="php/save_modelo.php" method="POST">
+                      <label for="" class="form-label">Informe a Marca:</label>
+                      <input type="text" id="marca" placeholder="Marca" name="marca" class="form-control">
+                      <label for="" class="form-label">Informe o Modelo:</label>
+                      <input type="text" id="modelo" placeholder="Modelo" name="modelo" class="form-control">
+                      <label for="" class="form-label">Informe a Cor:</label>
+                      <input type="text" id="cor" placeholder="Cor" name="cor" class="form-control">
+                      <label for="" class="form-label">Informe o Tipo "Sedan/Hatch":</label>
+                      <select class="form-select" id="modelo_veiculo_modal" name="tipo" aria-label="Default select example">
+                        <option selected value="0">Escolha uma Opção</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatch">Hatch</option>
+                        <option value="Motocicleta">Motocicleta</option>
+                      </select>
+                      <button id="enviar_modelo" type="submit" class="btn btn-outline-secondary">Enviar</button>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="cad-modelo">
-          <!-- Button trigger modal CADASTRAR MODELO-->
-          <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop2">Cadastrar Modelo</button>
-          <!-- Modal -->
-          <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel2">Formulário de Cadastro</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form id="formulario" name="formulario" action="php/save_modelo.php" method="POST">
-                    <label for="" class="form-label">Informe a Marca:</label>
-                    <input type="text" id="marca" placeholder="Marca" name="marca" class="form-control">
-                    <label for="" class="form-label">Informe o Modelo:</label>
-                    <input type="text" id="modelo" placeholder="Modelo" name="modelo" class="form-control">
-                    <label for="" class="form-label">Informe a Cor:</label>
-                    <input type="text" id="cor" placeholder="Cor" name="cor" class="form-control">
-                    <label for="" class="form-label">Informe o Tipo "Sedan/Hatch":</label>
-                    <select class="form-select" id="modelo_veiculo_modal" name="tipo" aria-label="Default select example">
-                      <option selected value="0">Escolha uma Opção</option>
-                      <option value="Sedan">Sedan</option>
-                      <option value="Hatch">Hatch</option>
-                      <option value="Motocicleta">Motocicleta</option>
-                    </select>
-                    <button id="enviar_modelo" type="submit" class="btn btn-outline-secondary">Enviar</button>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      </div>   
       <div class="cad-veiculo">
         <form id="formulario2" name="formulario2" action="php/save_veiculo.php" method="POST">
           <div>
@@ -134,7 +170,7 @@ include('php/conexao.php');
               <?php
               $result = mysqli_query($conexao,"SELECT * FROM `modelo`;");
               while ($row = $result->fetch_assoc()) {
-                ?><option value="<?php echo $row['codigo_modelo'];?>"><?php echo "{$row['marca']}//{$row['modelo']}//{$row['tipo']}//{$row['cor']}";?></option><?php
+                ?><option value="<?php echo $row['codigo_modelo'];?>"><?php echo "{$row['marca']} || {$row['modelo']} || {$row['tipo']} || {$row['cor']}";?></option><?php
               }
               ?>
 
