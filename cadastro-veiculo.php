@@ -77,7 +77,7 @@ include('php/conexao.php');
                         <thead>
                           <tr>
                             <th scope="col">#Placa</th>
-                            <th scope="col">#Codigo Pessoa</th>
+                            <th scope="col">#Proprietário</th>
                             <!--
                               <th scope="col">Codigo Modelo</th>
                             -->
@@ -86,14 +86,15 @@ include('php/conexao.php');
                         <tbody>
                           <tr>
                             <?php
-                              $result = mysqli_query($conexao,"SELECT * FROM `ve??culo`;");
+                              $result = mysqli_query($conexao,"SELECT * FROM `pessoa`, `ve??culo`
+                                  where `ve??culo`.cod_pessoa = pessoa.codigo_pessoa;");
                               while ($row = $result->fetch_assoc()) {
                             ?>
                             <td>
                               <?php echo $row['placa'];?>
                             </td>
                             <td>
-                              <?php echo $row['cod_pessoa'] ;?>
+                              <?php echo $row['nome'] ;?>
                             </td>
                             <!--
                             <td>

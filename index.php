@@ -82,13 +82,15 @@ include('php/conexao.php');
                   <tr>
                     <th scope="col">#Entrada</th>
                     <th scope="col">#Saida</th>
-                    <th scope="col">#Id Carro</th>
+                    <th scope="col">#Placa</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <?php
-                      $result = mysqli_query($conexao,"SELECT * FROM `registro`;");
+                      $result = mysqli_query($conexao,"SELECT * FROM `registro`, `ve??culo`
+                          where `ve??culo`.codigo_veiculo = registro.cod_veiculo
+                          order by registro.codigo_registro desc;");
                       while ($row = $result->fetch_assoc()) {
                     ?>
                     <td>
@@ -98,7 +100,7 @@ include('php/conexao.php');
                       <?php echo $row['data_saida'] ;?>
                     </td>
                     <td>
-                     <?php echo $row['cod_veiculo'] ;?>
+                     <?php echo $row['placa'] ;?>
                     </td>
                   </tr>
                   <?php } ?>

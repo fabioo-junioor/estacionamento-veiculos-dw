@@ -21,4 +21,6 @@
 #### Realise 1.0.1  
 - Inclusão de contador de visitas.  
 - Foi adiconado tabelas em: "registro de veiculos, pessoas cadastradas, veiculos cadastrados" para separar as consultas(select).  
-- Foi adicionado botões para emissão de relatório em: "registro de veiculos, pessoas cadastradas, veiculos cadastrados".
+- Foi adicionado botões para emissão de relatório em: "registro de veiculos, pessoas cadastradas, veiculos cadastrados".  
+- Realizada algumas alterações nas consultas de: "registro de veiculo, veiculos cadastrados.  
+- Ultimos registros de veiculos em ordem decrescente(order by__desc).
