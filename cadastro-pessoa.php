@@ -50,9 +50,9 @@ include('php/conexao.php');
       </div>
 
       <div class="listar-pessoas">
-        <!-- Button IMPRIMIR REGISTRO DE CADASTRO-->
+        <!-- Button IMPRIMIR RELATORIO DE CADASTRO-->
         <div class="registro_pessoas">
-          <button id="reg2" type="button" class="btn btn-secondary">Registro</button>
+          <button id="reg2" type="button" class="btn btn-secondary">Relatório</button>
         </div>
         <!-- Button trigger modal LISTAR PESSOAS-->
         <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Pessoas

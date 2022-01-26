@@ -75,7 +75,8 @@ include('php/conexao.php');
       </div>
       <div class="ultimos-registros">
         <h4>ULTIMOS VEICULOS REGISTRADOS</h4>
-        <button id="reg1" type="submit" class="btn btn-outline-secondary">Registro</button>
+        <!-- Button IMPRIMIR RELATORIO DE CADASTRO-->
+        <button id="reg1" type="submit" class="btn btn-outline-secondary">Relatório</button>
           <div class="tabela_registros">
             <table class="table table-bordered">
                 <thead>
