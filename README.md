@@ -24,3 +24,10 @@
 - Foi adicionado botões para emissão de relatório em: "registro de veiculos, pessoas cadastradas, veiculos cadastrados".  
 - Realizada algumas alterações nas consultas de: "registro de veiculo, veiculos cadastrados.  
 - Ultimos registros de veiculos em ordem decrescente(order by__desc).
+#### Realise 2.0.1 
+- Inclusão das atividades de Registro com 3 tipos usuais - Entrada e saída - Pessoa - Veículo/Modelo
+- Criação automática de PDF dos Registros
+- Correção do Mysql de Date para Datetime 
+- Implementação do Package Dompdf para a realização dos PDF's
+->>>>>>>>> Realizar a adequação do Painel de registros e dos PDF's resultado (na pasta /php/converts_pdf/pdfs/ . . . .)
+

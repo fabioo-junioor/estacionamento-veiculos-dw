@@ -34,6 +34,9 @@ include('php/conexao.php');
             <li class="nav-item">
               <a class="nav-link" href="cadastro-veiculo.php">Cadastrar Veiculos</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registros.php">Registros</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -73,9 +76,9 @@ include('php/conexao.php');
           </div>
         </form>
       </div>
+      
       <div class="ultimos-registros">
         <h4>ULTIMOS VEICULOS REGISTRADOS</h4>
-        <button id="reg1" type="submit" class="btn btn-outline-secondary">Registro</button>
           <div class="tabela_registros">
             <table class="table table-bordered">
                 <thead>
@@ -108,6 +111,7 @@ include('php/conexao.php');
             </table>
           </div>        
       </div>
+
     </div>
   </section>
   <footer class="rodape">

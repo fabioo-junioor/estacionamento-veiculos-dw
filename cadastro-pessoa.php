@@ -37,6 +37,9 @@ include('php/conexao.php');
             <li class="nav-item">
               <a class="nav-link" href="cadastro-veiculo.php">Cadastrar Veiculos</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registros.php">Registros</a>
+            </li>
           </ul>
         </div>
       </div>
