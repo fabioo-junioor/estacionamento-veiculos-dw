@@ -54,9 +54,11 @@ include('php/conexao.php');
       <div class="button-modais">        
         <div class="space_button">
         <!-- Button IMPRIMIR RELATORIO DE CADASTRO-->
+        <!--
           <div class="registro_veiculos">
             <button id="reg3" type="button" class="btn btn-secondary">Relatório</button>
           </div>
+        -->
         </div>
 
         <div class="space_button">

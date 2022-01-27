@@ -128,7 +128,6 @@ include('php/conexao.php');
   <footer class="rodape">
     <div class="container-fluid">
       <p> Copyright © 2021 </p>
-      <p> Total de visitas: <?php include "contador.php"; ?> </p>
     </div>
   </footer>
   <script src="js/validacao-home.js"></script>
