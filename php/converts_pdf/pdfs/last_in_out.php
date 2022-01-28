@@ -38,7 +38,7 @@ include('../conexao.php');
   }
   .ultimos-registros .tabela_registros td, th{
     padding: 10px;
-    border: solid 1px;
+    border: solid 2px;
     text-align: center;
 
   }

@@ -6,7 +6,7 @@
 .registro-placas, 
 .registro_pessoa, 
 .registro-veiculo{
-    width: 70%;
+    width: 60%;
     margin-bottom: 8%;
 
 }
@@ -45,7 +45,7 @@
     background-color: rgba(0, 0, 0, 0.400);
     color: white;
     font-size: 0.9rem;
-    width: auto;
+    width: 25%;
     height: 3.5rem;
     border: 2px solid #9d4edd;
 

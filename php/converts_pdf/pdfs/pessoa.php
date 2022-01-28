@@ -35,9 +35,9 @@ include('../conexao.php');
 }
 .ultimos-registros .tabela_registros td, th{
   padding: 10px;
-  border: solid 1px;
+  border: solid 2px;
   text-align: center;
-
+  
 }
 </style>
 <body>
@@ -55,7 +55,7 @@ include('../conexao.php');
                 </thead>
                 <tbody>
                   <tr>
-                  <?php
+                    <?php
                         $result = mysqli_query($conexao,"SELECT * FROM `pessoa` WHERE codigo_pessoa = '{$_POST['codigo_pessoa']}';");
                         while ($row = $result->fetch_assoc()) {
                         ?>
