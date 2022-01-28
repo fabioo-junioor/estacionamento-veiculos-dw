@@ -16,7 +16,30 @@ include('../conexao.php');
   <link rel="stylesheet" href="../css/tabela-registro.css" />
   <title>Estacionamento de Veiculos </title>
 </head>
+<style>
+  .ultimos-registros .tabela_registros table{
+    border: 1px solid black;
+    color: black;
+    width: 100%;
+    table-layout: auto;
+    margin: 20px auto;
 
+}
+.fixed{
+  table-layout: fixed;
+
+}
+.ultimos-registros .tabela_registros table, td, th{
+    border-collapse: collapse;
+
+}
+.ultimos-registros .tabela_registros td, th{
+  padding: 10px;
+  border: solid 1px;
+  text-align: center;
+
+}
+</style>
 <body>
 <div class="ultimos-registros">
         <h4>RELATÓRIO DO MORADOR!</h4>
@@ -27,7 +50,7 @@ include('../conexao.php');
                     <th scope="col">#NOME</th>
                     <th scope="col">#CPF</th>
                     <th scope="col">#TELEFONE</th>
-                    <th scope="col">#APARTAMENTP</th>
+                    <th scope="col">#APARTAMENTPO</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -56,6 +79,7 @@ include('../conexao.php');
       </div>
 
       <div class="ultimos-registros">
+        <br/><br/>
         <h4>RELATÓRIO DOS VEÍCULOS REFERENTES!</h4>
           <div class="tabela_registros">
             <table class="table table-bordered border ">

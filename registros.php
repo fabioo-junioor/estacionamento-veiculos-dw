@@ -12,6 +12,7 @@ include('php/conexao.php');
   integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="css/tabela-registro.css" />
+  <link rel="stylesheet" href="css/registros.css" />
   <title>Estacionamento de Veiculos </title>
 </head>
 <body>
@@ -44,7 +45,7 @@ include('php/conexao.php');
   </header>
   <section class="corpo">
     <div class="container-fluid">
-      <div>
+      <div class="title">
         <!-- ESCHOLA DA PLACA E BUTTON PARA PDF DO RELATORIO DE ENTRADA E SAIDA DO VEICULO-->
         <h4>REGISTRO DE ENTRADAS E SAÍDAS!</h4>
       </div>
@@ -53,6 +54,8 @@ include('php/conexao.php');
           <div>
               
             <label for="" class="form-label">Escolha a Placa do Veiculo:</label>
+          </div>
+          <div class="form-interno">
             <select class="form-select" id="codigo_veiculo" name="codigo_veiculo" aria-label="Default select example">
               <option selected value="0">Escolha uma Opção</option>
 
@@ -64,21 +67,22 @@ include('php/conexao.php');
               ?>
               
             </select>
-          </div>
-          <div>
+
             <button id="enviar" type="submit" class="btn btn-outline-secondary">Gerar PDF</button>
           </div>
         </form>
       </div>
       
-      <div>
+      <div class="title">
         <!-- ESCHOLA DA PESSOA E BUTTON PARA PDF DAS INFOS DA PESSOA-->
         <h4>REGISTROS DE UMA PESSOA!</h4>
       </div>
       <div class="registro_pessoa">
         <form id="registro_pessoa" name="registro_pessoa" action="php/converts_pdf/convert_pessoa.php" method="POST">
           <div>
-            <label for="" class="form-label">Escolha a pessoa:</label>
+              <label for="" class="form-label">Escolha a pessoa:</label>
+          </div>
+          <div class="form-interno">
             <select class="form-select" id="codigo_pessoa" name="codigo_pessoa" aria-label="Default select example">
               <option selected value="0">Escolha uma Opção</option>
 
@@ -90,14 +94,13 @@ include('php/conexao.php');
               ?>
               
             </select>
-          </div>
-          <div>
+
             <button id="enviar" type="submit" class="btn btn-outline-secondary">Gerar PDF</button>
           </div>
         </form>
       </div>
 
-      <div>
+      <div class="title">
         <!-- ESCHOLA DA PLACA E BUTTON PARA PDF DAS INFOS DO VEICULO-->
         <h4>REGISTROS DE UM VEÍCULO!</h4>
       </div>
@@ -105,6 +108,8 @@ include('php/conexao.php');
         <form id="registro-veiculo" name="registro-veiculo" action="php/converts_pdf/convert_veiculo.php" method="POST">
           <div>
             <label for="" class="form-label">Escolha a pessoa:</label>
+          </div>
+          <div class="form-interno">
             <select class="form-select" id="codigo_veiculo" name="codigo_veiculo" aria-label="Default select example">
               <option selected value="0">Escolha uma Opção</option>
 
@@ -116,8 +121,7 @@ include('php/conexao.php');
               ?>
               
             </select>
-          </div>
-          <div>
+            
             <button id="enviar" type="submit" class="btn btn-outline-secondary">Gerar PDF</button>
           </div>
         </form>

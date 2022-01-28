@@ -1,0 +1,22 @@
+.ultimos-registros .tabela_registros table{
+    border: 1px solid black;
+    color: black;
+    width: 100%;
+    table-layout: auto;
+    margin: 20px auto;
+
+}
+.fixed{
+  table-layout: fixed;
+
+}
+.ultimos-registros .tabela_registros table, td, th{
+    border-collapse: collapse;
+
+}
+.ultimos-registros .tabela_registros td, th{
+  padding: 10px;
+  border: solid 1px;
+  text-align: center;
+
+}

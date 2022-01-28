@@ -16,7 +16,30 @@ include('../conexao.php');
   <link rel="stylesheet" href="../css/tabela-registro.css" />
   <title>Estacionamento de Veiculos </title>
 </head>
+<style>
+  .ultimos-registros .tabela_registros table{
+    border: 1px solid black;
+    color: black;
+    width: 100%;
+    table-layout: auto;
+    margin: 20px auto;
 
+}
+.fixed{
+  table-layout: fixed;
+
+}
+.ultimos-registros .tabela_registros table, td, th{
+    border-collapse: collapse;
+
+}
+.ultimos-registros .tabela_registros td, th{
+  padding: 10px;
+  border: solid 1px;
+  text-align: center;
+
+}
+</style>
 <body>
 <div class="ultimos-registros">
         <h4>RELATÓRIO DE VEÍCULO!</h4>
@@ -24,7 +47,7 @@ include('../conexao.php');
             <table class="table table-bordered border ">
                 <thead>
                   <tr>
-                    <th scope="col">#NOME</th>
+                    <th scope="col">#PROPRIETARIO</th>
                     <th scope="col">#PLACA</th>
                     <th scope="col">#MODELO</th>
                     <th scope="col">#MARCA</th>

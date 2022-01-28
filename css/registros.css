@@ -1,0 +1,91 @@
+.corpo .container-fluid .title{
+    width: 90%;
+    padding: 5% 1% 1% 1%;
+
+}
+.registro-placas, 
+.registro_pessoa, 
+.registro-veiculo{
+    width: 70%;
+    margin-bottom: 8%;
+
+}
+.registro-placas label, 
+.registro_pessoa label,
+.registro-veiculo label{
+    color: #9d4edd;
+    font-size: 1.1rem;
+    
+}
+.form-interno{
+    display: flex;
+
+}
+.form-interno select{
+    background-color: rgba(0, 0, 0, 0.400);
+    color: white;
+    width: 75%;
+    height: 3.5rem;
+    border: 1px solid #9d4edd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+}
+.form-interno select:hover{
+    border-bottom: 1px solid white;
+
+}
+.form-interno option{
+    border-radius: 10px;
+    font-weight: 500;
+    
+}
+.form-interno button{
+    background-color: rgba(0, 0, 0, 0.400);
+    color: white;
+    font-size: 0.9rem;
+    width: auto;
+    height: 3.5rem;
+    border: 2px solid #9d4edd;
+
+}
+.form-interno button:hover{
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.400);
+
+}
+
+/*Response pagina REGISTROS -------------------------*/
+@media screen and (max-width: 768px){
+    .form-interno button{
+        font-size: 0.8rem;
+
+    
+    }
+}
+@media screen and (max-width: 500px){
+   .form-interno{
+       display: flex;
+       flex-direction: column;
+
+   }
+   .registro-placas, 
+    .registro_pessoa, 
+    .registro-veiculo{
+    width: 100%;
+    margin-bottom: 10%;
+
+    }
+    .form-interno select{
+        width: 100%;
+        
+        
+    }
+    .form-interno button{
+        width: 100%;
+        font-size: 1rem;
+        
+    
+    }
+}
