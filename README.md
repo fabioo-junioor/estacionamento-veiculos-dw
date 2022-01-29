@@ -36,3 +36,7 @@
 - Criada a estilização(inline) de tabelas para os relatórios em pdf's.  
 #### Realise 2.1.2  
 - Foi criada verificações nos (select's) dos registros, as consultas não podem ser vazias (!= 0);
+
+#### Realise 2.1.3  
+- Correção do Erro da geração de PDF das placas que não possuiam Registros
+- Correção da Visualização das Tabelas com mais de 3 linhas

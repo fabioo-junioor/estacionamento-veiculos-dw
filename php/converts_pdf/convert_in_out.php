@@ -10,8 +10,7 @@ $dompdf = new Dompdf();
 
 //INICIA A PAGINA SEM MOSTRAR NA TELA
 ob_start();
-#require_once 'pdfs/last_in_out.php';
-require_once 'pdfs/test.php';
+require_once 'pdfs/last_in_out.php';
 $pdf = ob_get_clean();
 
 //CARREGA O PDF

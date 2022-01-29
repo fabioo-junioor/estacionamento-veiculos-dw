@@ -6,115 +6,93 @@ include('../conexao.php');
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-  <title>Estacionamento de Veiculos </title>
-</head>
+
 <style>
-  .ultimos-registros .tabela_registros table{
-    border: 1px solid black;
-    color: black;
-    width: 100%;
-    table-layout: auto;
-    margin: 20px auto;
+    *{
+        font-family: sans-serif;
+    }
 
-}
-.fixed{
-  table-layout: fixed;
+    table{
+        background-color: #fefefe;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        text-align: center;
+        width: 95%;
+    }
 
-}
-.ultimos-registros .tabela_registros table, td, th{
-    border-collapse: collapse;
+    tabled td, table th{
+        border: 1px solid #ccc;
+    }
 
-}
-.ultimos-registros .tabela_registros td, th{
-  padding: 10px;
-  border: solid 2px;
-  text-align: center;
-  
-}
+    tabled th{
+        font-weight: bold;
+        background-color: #eee;
+        padding: 10px;
+    }
+
 </style>
-<body>
-<div class="ultimos-registros">
-        <h4>RELATÓRIO DO MORADOR!</h4>
-          <div class="tabela_registros">
-            <table class="table table-bordered border ">
-                <thead>
-                  <tr>
-                    <th scope="col">#NOME</th>
-                    <th scope="col">#CPF</th>
-                    <th scope="col">#TELEFONE</th>
-                    <th scope="col">#APARTAMENTPO</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <?php
-                        #Obtendo informações do Banco
-                        $result = mysqli_query($conexao,"SELECT * FROM `pessoa` WHERE codigo_pessoa = '{$_POST['codigo_pessoa']}';");
-                        #andando pelas informações referentes ao PDF
-                        while ($row = $result->fetch_assoc()) {
-                        ?>
-                        <td>
-                          <?php echo $row['nome'];?>
-                        </td>
-                        <td>
-                          <?php echo $row['cpf'];?>
-                        </td>
-                        <td>
-                          <?php echo $row['telefone'] ;?>
-                        </td>
-                        <td>
-                          <?php echo $row['num_apart'] ;?>
-                        </td>
-                      </tr>
-                        <?php } ?>
-                </tbody>
-            </table>
-          </div>        
-      </div>
 
-      <div class="ultimos-registros">
-        <br/><br/>
-        <h4>RELATÓRIO DOS VEÍCULOS REFERENTES!</h4>
-          <div class="tabela_registros">
-            <table class="table table-bordered border ">
-                <thead>
-                  <tr>
-                    <th scope="col">#PLACA</th>
-                    <th scope="col">#MODELO</th>
-                    <th scope="col">#MARCA</th>
-                    <th scope="col">#TIPO</th>
-                    <th scope="col">#COR</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <?php
-                      $result = mysqli_query($conexao,"SELECT * FROM `pessoa`, `ve??culo`, `modelo`
-                      where `pessoa`.codigo_pessoa = `ve??culo`.cod_pessoa and `modelo`.codigo_modelo = `ve??culo`.cod_modelo and `pessoa`.codigo_pessoa = '{$_POST['codigo_pessoa']}';");
-                      while ($row = $result->fetch_assoc()) {
-                    ?>
-                    <td>
-                      <?php echo $row['placa'] ;?>
-                    </td>
-                    <td>
-                     <?php echo $row['modelo'] ;?>
-                    </td>
-                    <td>
-                     <?php echo $row['marca'] ;?>
-                    </td>
-                    <td>
-                     <?php echo $row['tipo'] ;?>
-                    </td>
-                    <td>
-                     <?php echo $row['cor'] ;?>
-                    </td>
-                  </tr>
-                  <?php } ?>
-                </tbody>
-            </table>
-          </div>        
-      </div>
 
-</body>
+<h2>Informações do Morador</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cpf</th>
+            <th>Telefone</th>
+            <th>Apartamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+            #Obtendo informações do Banco
+            $result = mysqli_query($conexao,"SELECT * FROM `pessoa` 
+            WHERE codigo_pessoa = '{$_POST['codigo_pessoa']}';");
+            #andando pelas informações referentes ao PDF
+            while ($row = $result->fetch_assoc()) {
+        ?>
+        <tr>
+            <td><?php echo $row['nome'];?></td>
+            <td><?php echo $row['cpf'];?></td>
+            <td><?php echo $row['telefone'];?></td>
+            <td><?php echo $row['num_apart'];?></td>
+        </tr>
+        <?php
+            }
+        ?>
+    </tbody>
+</table>
+
+<h2>Veículos registrados pelo Morador</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Placa</th>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Tipo</th>
+            <th>Cor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+            #Obtendo informações do Banco
+            $result = mysqli_query($conexao,"SELECT * FROM `pessoa`, `ve??culo`, `modelo`
+            where `pessoa`.codigo_pessoa = `ve??culo`.cod_pessoa and `modelo`.codigo_modelo = `ve??culo`.cod_modelo and `pessoa`.codigo_pessoa = '{$_POST['codigo_pessoa']}';");
+            #andando pelas informações referentes ao PDF
+            while ($row = $result->fetch_assoc()) {
+        ?>
+        <tr>
+            <td><?php echo $row['placa'];?></td>
+            <td><?php echo $row['modelo'];?></td>
+            <td><?php echo $row['marca'];?></td>
+            <td><?php echo $row['tipo'];?></td>
+            <td><?php echo $row['cor'];?></td>
+        </tr>
+        <?php
+            }
+        ?>
+    </tbody>
+</table>
+
 </html>
