@@ -50,7 +50,7 @@ include('php/conexao.php');
         <h4>REGISTRO DE ENTRADAS E SAÍDAS!</h4>
       </div>
       <div class="registro-placas">
-        <form id="registro-placas" name="registro-placas" action="php/converts_pdf/convert_in_out.php" method="POST">
+        <form id="registro-placas" name="registro_placas" action="php/converts_pdf/convert_in_out.php" method="POST">
           <div>
               
             <label for="" class="form-label">Escolha a Placa do Veiculo:</label>
@@ -80,7 +80,7 @@ include('php/conexao.php');
       <div class="registro_pessoa">
         <form id="registro_pessoa" name="registro_pessoa" action="php/converts_pdf/convert_pessoa.php" method="POST">
           <div>
-              <label for="" class="form-label">Escolha a pessoa:</label>
+              <label for="" class="form-label">Escolha a Pessoa:</label>
           </div>
           <div class="form-interno">
             <select class="form-select" id="codigo_pessoa" name="codigo_pessoa" aria-label="Default select example">
@@ -95,7 +95,7 @@ include('php/conexao.php');
               
             </select>
 
-            <button id="enviar" type="submit" class="btn btn-outline-secondary">Gerar PDF</button>
+            <button id="enviar2" type="submit" class="btn btn-outline-secondary">Gerar PDF</button>
           </div>
         </form>
       </div>
@@ -105,9 +105,9 @@ include('php/conexao.php');
         <h4>REGISTROS DE UM VEÍCULO!</h4>
       </div>
       <div class="registro-veiculo">
-        <form id="registro-veiculo" name="registro-veiculo" action="php/converts_pdf/convert_veiculo.php" method="POST">
+        <form id="registro-veiculo" name="registro_veiculo" action="php/converts_pdf/convert_veiculo.php" method="POST">
           <div>
-            <label for="" class="form-label">Escolha a pessoa:</label>
+            <label for="" class="form-label">Escolha a Placa do Veiculo:</label>
           </div>
           <div class="form-interno">
             <select class="form-select" id="codigo_veiculo" name="codigo_veiculo" aria-label="Default select example">
@@ -122,7 +122,7 @@ include('php/conexao.php');
               
             </select>
             
-            <button id="enviar" type="submit" class="btn btn-outline-secondary">Gerar PDF</button>
+            <button id="enviar3" type="submit" class="btn btn-outline-secondary">Gerar PDF</button>
           </div>
         </form>
       </div>
@@ -134,7 +134,7 @@ include('php/conexao.php');
       <p> Copyright © 2021 </p>
     </div>
   </footer>
-  <script src="js/validacao-home.js"></script>
+  <script src="js/validacao-registros.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>

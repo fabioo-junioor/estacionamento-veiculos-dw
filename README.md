@@ -33,5 +33,6 @@
 #### Realise 2.0.2  
 - Realizada a estilização da pagina registros.  
 - Retirada dos botões de registro.  
-- Criada a estilização(inline) de tabelas para os relatórios em pdf's.
-
+- Criada a estilização(inline) de tabelas para os relatórios em pdf's.  
+#### Realise 2.1.2  
+- Foi criada verificações nos (select's) dos registros, as consultas não podem ser vazias (!= 0);
