@@ -23,7 +23,7 @@ $dompdf->setPaper('A4');
 $dompdf->render();
 
 // Output the generated PDF to Browser
-$dompdf->stream("saida.pdf",["Attachment" => false]);
+$dompdf->stream("infopessoa.pdf",["Attachment" => false]);
 
 
 ?>

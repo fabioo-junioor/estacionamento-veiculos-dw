@@ -2,28 +2,34 @@
 
 include('../conexao.php');
 
+#verifica se tem registro na placa
+$verification = mysqli_query($conexao,"SELECT * FROM `registro`
+where `registro`.cod_veiculo = '{$_POST['codigo_veiculo']}'");
+$verification = $verification->fetch_assoc();
+
+#caso não haja retorna ao index
+if($verification['codigo_registro'] == FALSE){
+  header('Location: ..\..\..\index.php');
+  exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
   <title>Estacionamento de Veiculos</title>
 </head>
 <style>
   .ultimos-registros, .tabela_registros{
-    width: 100%;
+    width: 80%;
     height: auto;
 
   }
   .ultimos-registros .tabela_registros table{
     border: 1px solid black;
     color: black;
-    width: 100%;
+    width: 80%;
     table-layout: auto;
     margin: 20px auto;
     
@@ -58,10 +64,12 @@ include('../conexao.php');
                 <tbody>
                   <tr>
                     <?php
-                      $result = mysqli_query($conexao,"SELECT * FROM `registro`, `ve??culo`
-                      where `ve??culo`.codigo_veiculo = '{$_POST['codigo_veiculo']}' and `ve??culo`.codigo_veiculo = registro.cod_veiculo 
-                      order by registro.codigo_registro desc;");
-                      while ($row = $result->fetch_assoc()) {
+                    #Obtendo informações do Banco
+                    $result = mysqli_query($conexao,"SELECT * FROM `registro`, `ve??culo`
+                    where `ve??culo`.codigo_veiculo = '{$_POST['codigo_veiculo']}' and `ve??culo`.codigo_veiculo = registro.cod_veiculo 
+                    order by registro.codigo_registro desc;");
+                    #andando pelas informações referentes ao PDF
+                    while ($row = $result->fetch_assoc()) {
                     ?>
                     <td>
                       <?php echo $row['data_chegada'];?>
@@ -81,7 +89,4 @@ include('../conexao.php');
       </div>
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
 </html>
