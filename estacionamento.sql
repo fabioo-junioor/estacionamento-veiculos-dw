@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 27-Jan-2022 às 04:56
+-- Tempo de geração: 01-Fev-2022 às 00:56
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `modelo` (
   `tipo` varchar(100) NOT NULL,
   `marca` varchar(100) NOT NULL,
   PRIMARY KEY (`codigo_modelo`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `modelo`
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `pessoa` (
   `telefone` varchar(11) NOT NULL,
   `num_apart` int NOT NULL,
   PRIMARY KEY (`codigo_pessoa`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `pessoa`
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `registro` (
   `cod_veiculo` int NOT NULL,
   PRIMARY KEY (`codigo_registro`),
   KEY `cod_veiculo_fk` (`cod_veiculo`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `registro`
@@ -98,7 +98,8 @@ INSERT INTO `registro` (`codigo_registro`, `data_chegada`, `data_saida`, `cod_ve
 (15, '2022-01-27 01:40:27', '2022-01-27 01:42:38', 6),
 (16, '2022-01-27 01:42:18', '2022-01-27 01:42:45', 6),
 (18, '2022-01-27 01:44:36', '2022-01-27 01:44:45', 6),
-(19, '2022-01-27 01:44:51', '0000-00-00 00:00:00', 6);
+(19, '2022-01-27 01:44:51', '2022-01-27 02:08:22', 6),
+(20, '2022-01-31 21:36:12', '2022-01-31 21:36:26', 7);
 
 -- --------------------------------------------------------
 
@@ -115,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `ve??culo` (
   PRIMARY KEY (`codigo_veiculo`),
   KEY `cod_pessoa_fk` (`cod_pessoa`),
   KEY `cod_modelo_fk` (`cod_modelo`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `ve??culo`
@@ -123,7 +124,8 @@ CREATE TABLE IF NOT EXISTS `ve??culo` (
 
 INSERT INTO `ve??culo` (`codigo_veiculo`, `placa`, `cod_pessoa`, `cod_modelo`) VALUES
 (5, '0000000', 2, 1),
-(6, '46464646', 4, 3);
+(6, '46464646', 4, 3),
+(7, '09091515', 3, 2);
 
 --
 -- Restrições para despejos de tabelas

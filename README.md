@@ -29,14 +29,12 @@
 - Criação automática de PDF dos Registros
 - Correção do Mysql de Date para Datetime 
 - Implementação do Package Dompdf para a realização dos PDF's
-->>>>>>>>> Realizar a adequação do Painel de registros e dos PDF's resultado (na pasta /php/converts_pdf/pdfs/ . . . .).  
 #### Realise 2.0.2  
 - Realizada a estilização da pagina registros.  
 - Retirada dos botões de registro.  
 - Criada a estilização(inline) de tabelas para os relatórios em pdf's.  
 #### Realise 2.1.2  
 - Foi criada verificações nos (select's) dos registros, as consultas não podem ser vazias (!= 0);
-
 #### Realise 2.1.3  
 - Correção do Erro da geração de PDF das placas que não possuiam Registros
 - Correção da Visualização das Tabelas com mais de 3 linhas
