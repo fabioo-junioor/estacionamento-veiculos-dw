@@ -153,6 +153,7 @@
 .corpo .modal-body #formulario option{
     border-radius: 10px;
     font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.700);
     
 }
 .corpo .cad-modelo .modal-body #formulario button{
@@ -247,6 +248,7 @@
 .corpo .cad-veiculo #formulario2 option{
     border-radius: 10px;
     font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.700);
     
 }
 .corpo .cad-veiculo #formulario2 button{

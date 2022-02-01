@@ -1,13 +1,13 @@
 .corpo .container-fluid .title{
     width: 90%;
-    padding: 5% 1% 1% 1%;
+    padding: 2% 1% 1% 1%;
 
 }
 .registro-placas, 
 .registro_pessoa, 
 .registro-veiculo{
     width: 60%;
-    margin-bottom: 8%;
+    margin-bottom: 5%;
 
 }
 .registro-placas label, 
@@ -39,6 +39,7 @@
 .form-interno option{
     border-radius: 10px;
     font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.700);
     
 }
 .form-interno button{

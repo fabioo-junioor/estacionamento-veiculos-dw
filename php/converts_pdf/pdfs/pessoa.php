@@ -16,14 +16,14 @@ include('../conexao.php');
     table{
         background-color: #fefefe;
         border-radius: 5px;
-        border: 1px solid #ccc;
+        border: 2px solid #000000ee;
         text-align: center;
         width: 95%;
 
     }
 
     tabled td, table th{
-        border: 2px solid #000000;
+        border: 1px solid #000000ee;
         background-color: #a0a0a0;
 
     }
@@ -36,9 +36,10 @@ include('../conexao.php');
         
     }
     tbody td{
-        border: 1px solid #c3c3c3;
+        border: 1px solid #000000ee;
         padding: 10px;
         color: #000000;
+        background-color: #a0a0a05f;
         
     }
 

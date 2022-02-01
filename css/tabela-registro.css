@@ -1,18 +1,23 @@
 /*Config tabela pagina home ----------------------*/
 .ultimos-registros .tabela_registros table{
-    border: 2px solid #9d4edd;
+    border: 3px solid #9d4edd;
     color: white;
 
 }
 .ultimos-registros .tabela_registros thead{
     font-size: 1.3rem;
     color: white;
+    background-color: rgba(0, 0, 0, 0.400);
 
 }
 .ultimos-registros .tabela_registros table tr{
     border: 2px solid #9d4edd;
     font-size: 1.1rem;
 
+}
+.ultimos-registros .tabela_registros tbody{
+    background-color: rgba(0, 0, 0, 0.200);
+    
 }
 .ultimos-registros #reg1{
     float: right;
@@ -43,12 +48,17 @@
 .modal-body .tabela_registros thead{
     font-size: 1.3rem;
     color: white;
+    background-color: rgba(0, 0, 0, 0.400);
 
 }
 .modal-body .tabela_registros table tr{
     border: 2px solid #9d4edd;
     font-size: 1.1rem;
 
+}
+.modal-body .tabela_registros tbody{
+    background-color: rgba(0, 0, 0, 0.200);
+    
 }
 
 /*Response tabelas das paginas --------------------*/

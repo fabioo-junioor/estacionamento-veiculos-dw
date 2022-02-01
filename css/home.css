@@ -120,6 +120,7 @@ body{
 .registro-veiculo #formulario option{
     border-radius: 10px;
     font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.700);
     
 }
 .registro-veiculo #formulario button{
