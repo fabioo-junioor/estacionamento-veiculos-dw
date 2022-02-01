@@ -10,6 +10,7 @@ include('../conexao.php');
 <style>
     *{
         font-family: sans-serif;
+
     }
 
     table{
@@ -18,17 +19,20 @@ include('../conexao.php');
         border: 1px solid #ccc;
         text-align: center;
         width: 95%;
+
     }
 
     tabled td, table th{
         border: 2px solid #000000;
         background-color: #a0a0a0;
+
     }
 
     tabled th{
         font-weight: bold;
         background-color: #eee;
         padding: 10px;
+        
         
     }
     tbody td{

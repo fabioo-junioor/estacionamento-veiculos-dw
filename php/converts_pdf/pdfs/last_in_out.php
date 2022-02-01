@@ -21,6 +21,7 @@ if($verification['codigo_registro'] == FALSE){
 <style>
     *{
         font-family: sans-serif;
+
     }
 
     table{
@@ -29,16 +30,26 @@ if($verification['codigo_registro'] == FALSE){
         border: 1px solid #ccc;
         text-align: center;
         width: 95%;
+
     }
 
     tabled td, table th{
         border: 1px solid #ccc;
+        background-color: #a0a0a0;
+
     }
 
     tabled th{
         font-weight: bold;
         background-color: #eee;
         padding: 10px;
+
+    }
+    tbody td{
+        border: 1px solid #c3c3c3;
+        padding: 10px;
+        color: #000000;
+        
     }
 
 </style>
